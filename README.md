@@ -1,6 +1,6 @@
 # Hanja Trainer
 
-A phone-friendly quiz app for Korean words, organised by the hanja they come from (currently 소, 사, 산, 살, 삼 and 상: 51 hanja, 165 words).
+A phone-friendly quiz app for Korean words, organised by the hanja they come from (currently 소, 사, 산, 살, 삼, 상 and 색: 53 hanja, 188 words).
 
 - Home screen groups hanja by syllable; tap one to see its words, tick several to quiz just those.
 - Question types: 한국어 → English, English → 한국어, and **Word → which hanja?** (homophones like 所/小/消 make this the real test), or a mix.
