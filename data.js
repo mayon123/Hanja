@@ -336,4 +336,90 @@ window.HANJA_DATA = [
       ["삼계탕", "ginseng chicken soup"],
     ],
   },
+  {
+    hanja: "上", reading: "상", meaning: "above",
+    words: [
+      ["이상", "more than / above"],
+      ["더 이상", "anymore / any longer / no more"],
+      ["세상", "world"],
+      ["향상시키다", "to improve"],
+      ["옥상", "rooftop"],
+      ["상사", "boss / superior"],
+    ],
+  },
+  {
+    hanja: "像", reading: "상", meaning: "shape / image",
+    words: [
+      ["상상", "imagination"],
+      ["상상력", "imagination / creativity"],
+      ["상상하다", "to imagine"],
+      ["영상", "video"],
+      ["동영상", "video"],
+      ["동영상 강의", "online courses"],
+    ],
+  },
+  {
+    hanja: "想", reading: "상", meaning: "think",
+    words: [
+      ["상상", "imagination"],
+      ["상상력", "imagination / creativity"],
+      ["상상하다", "to imagine"],
+      ["환상적이다", "to be fantastic"],
+    ],
+  },
+  {
+    hanja: "常", reading: "상", meaning: "normal / constant",
+    words: [
+      ["항상", "always"],
+      ["일상", "daily life"],
+      ["수상하다", "suspicious"],
+    ],
+  },
+  {
+    hanja: "傷", reading: "상", meaning: "wound",
+    words: [
+      ["상처", "wound"],
+      ["상하다", "to get spoiled / to get damaged"],
+    ],
+  },
+  {
+    hanja: "床", reading: "상", meaning: "table / bed",
+    words: [
+      ["책상", "desk"],
+    ],
+  },
+  {
+    hanja: "象", reading: "상", meaning: "appearance",
+    words: [
+      ["인상", "impression"],
+      ["인상적", "impressive"],
+      ["인상적이다", "to be impressive"],
+      ["첫인상", "first impression"],
+      ["대상자", "target person / candidate"],
+      ["상모", "sangmo (traditional hat in folk dance performance)"],
+    ],
+  },
+  {
+    hanja: "相", reading: "상", meaning: "mutual",
+    words: [
+      ["상관", "relationship / concern / connection"],
+      ["상관없다", "to not matter / to have nothing to do with"],
+    ],
+  },
+  {
+    hanja: "狀", reading: "상", meaning: "form / state",
+    words: [
+      ["증상", "symptoms"],
+      ["심장마비 증상", "heart attack symptom"],
+      ["상황", "situation / circumstance"],
+    ],
+  },
+  {
+    hanja: "賞", reading: "상", meaning: "reward / appreciate",
+    words: [
+      ["상", "award / price"],
+      ["우등상", "honor award / excellence award"],
+      ["감상", "to appreciate (art / music / film)"],
+    ],
+  },
 ];
