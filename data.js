@@ -267,4 +267,73 @@ window.HANJA_DATA = [
       ["건배사", "toast / toast speech"],
     ],
   },
+  {
+    hanja: "山", reading: "산", meaning: "mountain",
+    words: [
+      ["산", "mountain"],
+      ["등산", "hiking"],
+      ["등산하다", "to hike / to climb a mountain"],
+      ["등산을 가다", "to go hiking"],
+      ["등산로", "hiking trail"],
+      ["산불", "forest fire"],
+      ["산딸기", "wild strawberry / raspberry"],
+      ["유달산", "Yudalsan"],
+      ["피레네 산", "Pyrenees Mountains"],
+      ["부산", "Busan"],
+      ["아산", "Asan"],
+      ["익산", "Iksan"],
+    ],
+  },
+  {
+    hanja: "産", reading: "산", meaning: "produce / made in",
+    words: [
+      ["임산부", "pregnant woman"],
+      ["해산물", "seafood"],
+      ["수산물", "seafood / marine products"],
+      ["부동산", "real estate"],
+      ["미국산 소고기", "US beef"],
+      ["호주산 소고기", "Australian beef"],
+      ["국내산 소고기", "domestic beef (Hanwoo)"],
+      ["중국산", "made in China"],
+    ],
+  },
+  {
+    hanja: "散", reading: "산", meaning: "disperse",
+    words: [
+      ["산책", "walk / stroll"],
+      ["산책하다", "to take a walk"],
+      ["산책시키다", "to take for a walk"],
+    ],
+  },
+  {
+    hanja: "算", reading: "산", meaning: "calculate / count",
+    words: [
+      ["계산하다", "to pay / to calculate"],
+    ],
+  },
+  {
+    hanja: "傘", reading: "산", meaning: "umbrella / parasol",
+    words: [
+      ["우산", "umbrella"],
+    ],
+  },
+  {
+    hanja: "殺", reading: "살", meaning: "kill",
+    words: [
+      ["살인", "murder"],
+    ],
+  },
+  {
+    hanja: "三", reading: "삼", meaning: "three",
+    words: [
+      ["삼", "three (Sino-Korean)"],
+      ["삼시 세끼", "three meals a day"],
+    ],
+  },
+  {
+    hanja: "蔘", reading: "삼", meaning: "ginseng",
+    words: [
+      ["삼계탕", "ginseng chicken soup"],
+    ],
+  },
 ];
