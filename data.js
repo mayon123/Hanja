@@ -491,4 +491,30 @@ window.HANJA_DATA = [
       ["묘생", "cat's life"],
     ],
   },
+  {
+    hanja: "書", reading: "서", meaning: "book / writing",
+    words: [
+      ["도서관", "library"],
+      ["도서", "books"],
+      ["독서", "reading"],
+      ["서점", "bookstore"],
+      ["원서", "application form"],
+      ["신청서", "application form"],
+      ["지원서", "application form"],
+      ["엽서", "postcard"],
+    ],
+  },
+  {
+    hanja: "西", reading: "서", meaning: "west",
+    words: [
+      ["서쪽", "west"],
+    ],
+  },
+  {
+    hanja: "序", reading: "서", meaning: "order / sequence",
+    words: [
+      ["순서", "order / turn"],
+      ["순서대로", "in order / chronologically"],
+    ],
+  },
 ];
