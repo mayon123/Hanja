@@ -1,0 +1,49 @@
+:root{--bg:#f6f5fb;--card:#fff;--ink:#1d1b2e;--mute:#6b6880;--line:#e4e1f0;--accent:#4f46a5;--accent-ink:#fff;--ok:#1f8a4c;--okbg:#e2f5ea;--bad:#c23b3b;--badbg:#fbe6e6}
+@media(prefers-color-scheme:dark){:root{--bg:#14131f;--card:#1f1d2e;--ink:#eeedf7;--mute:#9a97b3;--line:#33304a;--accent:#8b84e8;--accent-ink:#14131f;--ok:#5fd18b;--okbg:#17332512;--bad:#ff8080;--badbg:#3a1c1c}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,-apple-system,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+#bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:var(--bg);border-bottom:1px solid var(--line)}
+#bar h1{font-size:18px;margin:0;flex:1}
+#bar button{background:none;border:0;color:var(--accent);font-size:15px;padding:6px 4px}
+main{padding:12px 16px calc(100px + env(safe-area-inset-bottom));max-width:640px;margin:0 auto}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:20px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.hj{display:flex;align-items:center;gap:12px;cursor:pointer}
+.hj .big{font:700 34px/1 "Noto Serif CJK KR","Noto Serif CJK SC","Songti SC","Hiragino Mincho ProN",serif;width:48px;text-align:center;flex:none}
+.hj .info{flex:1;min-width:0}
+.hj .t{font-weight:600}
+.hj .s{font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:5px;background:var(--line);border-radius:3px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ok)}
+.chk{width:24px;height:24px;accent-color:var(--accent);flex:none}
+.fab{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%);display:flex;gap:8px;max-width:640px;margin:0 auto}
+button.pri,button.sec{flex:1;border-radius:12px;padding:14px;font-size:16px;font-weight:600;border:1px solid var(--accent)}
+button.pri{background:var(--accent);color:var(--accent-ink)}
+button.sec{background:var(--card);color:var(--accent)}
+button:disabled{opacity:.4}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.seg button{flex:1 1 auto;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px}
+.seg button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.q{text-align:center;padding:26px 12px}
+.q .lbl{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.q .w{font-size:34px;font-weight:700;margin:8px 0;word-break:keep-all}
+.q .w.cjk{font-size:80px;font-family:"Noto Serif CJK KR","Noto Serif CJK SC",serif}
+.q .hint{color:var(--mute);font-size:14px}
+.opt{display:block;width:100%;text-align:left;margin-bottom:8px;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px}
+.opt .hh{font:700 22px serif;margin-right:8px}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}
+.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.prog{font-size:13px;color:var(--mute);display:flex;justify-content:space-between;margin-bottom:6px}
+.flip{min-height:200px;display:flex;flex-direction:column;justify-content:center}
+.ans{font-size:22px;margin-top:10px;color:var(--accent)}
+.row{display:flex;gap:8px;margin-top:8px}
+.row button{flex:1}
+.res{text-align:center}
+.res .score{font-size:56px;font-weight:800;color:var(--accent)}
+table{width:100%;border-collapse:collapse}
+td{padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:600;width:42%}
+td .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--line)}
+.dot.g{background:var(--ok)!important}.dot.r{background:var(--bad)!important}.dot.y{background:#e0b030!important}
+.small{font-size:13px;color:var(--mute)}
+.opt:disabled{opacity:1}
