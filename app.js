@@ -93,18 +93,21 @@ function startQuiz() {
   let pool = shuffle(poolWords());
   const rank = x => { const s = status(x.k); return { weak: 0, new: 1, learning: 2, known: 3 }[s]; };
   pool.sort((a, b) => rank(a) - rank(b));
+  const seenW = new Set(); // a word shared by two hanja (e.g. 상상) is asked once
+  pool = pool.filter(x => !seenW.has(x.w[0]) && seenW.add(x.w[0]));
   if (store.count) pool = pool.slice(0, store.count);
   pool = shuffle(pool);
   const modes = store.mode === 'mix' ? ['ko-en', 'en-ko', 'word-hanja'] : [store.mode];
-  Q = { items: pool.map((x, i) => ({ ...x, mode: modes[i % modes.length] })), i: 0, right: 0, missed: [] };
+  const shared = x => ALL.some(y => y.h !== x.h && y.w[0] === x.w[0]);
+  Q = { items: pool.map((x, i) => ({ ...x, mode: modes[i % modes.length] === 'word-hanja' && shared(x) ? 'ko-en' : modes[i % modes.length] })), i: 0, right: 0, missed: [] };
   go(question);
 }
-function distractors(item, field, n) {
+function distractors(item, field, n, bad = () => false) {
   // wrong options: same-pool first, then everything; unique by text, never equal to the answer
   const ans = field(item), seen = new Set([ans]);
   const out = [];
   for (const src of [poolWords(), ALL]) for (const x of shuffle(src)) {
-    const t = field(x); if (!seen.has(t)) { seen.add(t); out.push(t); }
+    const t = field(x); if (!seen.has(t) && !bad(x)) { seen.add(t); out.push(t); }
     if (out.length >= n) return out;
   }
   return out;
@@ -115,12 +118,12 @@ function question() {
   header(`${Q.i + 1} / ${Q.items.length}`, true);
   const h = it.h, w = it.w;
   let label, big, cjk = false, ans, opts, hint = '';
-  if (it.mode === 'ko-en') { label = 'What does it mean?'; big = w[0]; ans = w[1]; opts = [ans, ...distractors(it, x => x.w[1], 3)]; }
-  else if (it.mode === 'en-ko') { label = 'How do you say…'; big = w[1]; ans = w[0]; opts = [ans, ...distractors(it, x => x.w[0], 3)]; }
+  if (it.mode === 'ko-en') { label = 'What does it mean?'; big = w[0]; ans = w[1]; opts = [ans, ...distractors(it, x => x.w[1], 3, x => x.w[0] === w[0])]; }
+  else if (it.mode === 'en-ko') { label = 'How do you say…'; big = w[1]; ans = w[0]; opts = [ans, ...distractors(it, x => x.w[0], 3, x => x.w[1] === w[1])]; }
   else {
     label = 'Which hanja is in this word?'; big = w[0];
     ans = h.hanja + '|' + h.meaning;
-    const hs = shuffle(DATA.filter(x => x.hanja !== h.hanja && (x.reading === h.reading || true)));
+    const hs = shuffle(DATA.filter(x => x.hanja !== h.hanja && !x.words.some(v => v[0] === w[0])));
     // prefer same reading so the choice is a real test
     hs.sort((a, b) => (b.reading === h.reading) - (a.reading === h.reading));
     opts = [ans, ...hs.slice(0, 3).map(x => x.hanja + '|' + x.meaning)];
